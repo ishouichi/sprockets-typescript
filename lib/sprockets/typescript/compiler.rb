@@ -77,8 +77,9 @@ module Sprockets
         libdts = Unit.new(DEFAULT_LIB_PATH, File.read(DEFAULT_LIB_PATH))
         additional_units = [libdts]
         unless context.nil?
-          additional_units |= context._required_paths.to_a.reject { |p| p == path }.map { |path| Unit.new(path) }
-          additional_units |= context._dependency_assets.to_a.reject { |p| p == path }.map { |path| Unit.new(path) }
+          additional_paths = context._required_paths.to_a.reject { |p| p == path }
+          additional_paths |= context._dependency_assets.to_a.reject { |p| p == path }
+          additional_units += additional_paths.map { |p| Unit.new(p) }
         end
         @ctx["Ruby"] = {
           "source" => Unit.new(path, content),
