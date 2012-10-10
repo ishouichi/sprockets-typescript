@@ -1,0 +1,3 @@
+//= require bar
+
+Bar.bar();
