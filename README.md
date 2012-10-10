@@ -2,11 +2,20 @@
 
 ## sprockets-typescript
 
+[![Build Status](https://travis-ci.org/antage/sprockets-typescript.png)](https://travis-ci.org/antage/sprockets-typescript)
+
 This gem adds TypeScript support to [Sprockets](https://github.com/sstephenson/sprockets).
 
 ### How to use TypeScript with Sprockets?
 
-Just add `.js.ts` extension to filename.
+Add the following line in `Gemfile`:
+```ruby
+gem "sprockets-typescript", github: "antage/sprockets-typescript"
+```
+
+Run `bundle install`.
+
+And just add `.js.ts` extension to filename of typescript source.
 
 ### How does TypeScript compiler extract type information from external files?
 
