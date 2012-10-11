@@ -1,3 +1,3 @@
-import foo = module("bar.js");
+import foo = module("bar");
 
 foo.moo();

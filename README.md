@@ -36,7 +36,7 @@ export function bar(): string {
 ```js
 // app/javascripts/application.js.ts
 
-import bar = module("bar.module.js");
+import bar = module("bar.module");
 
 bar.bar();
 ```

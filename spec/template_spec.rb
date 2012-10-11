@@ -44,7 +44,7 @@ describe Sprockets::Environment do
     context "#find_asset('foo')" do
       subject { environment.find_asset("foo") }
       it { should_not be_nil }
-      it { subject.to_s.should eql "function moo() {\n    return \"moo\";\n}\nexports.moo = moo;\n\nvar foo = require(\"./bar.js\")\nfoo.moo();\n\n" }
+      it { subject.to_s.should eql "function moo() {\n    return \"moo\";\n}\nexports.moo = moo;\n\nvar foo = require(\"./bar\")\nfoo.moo();\n\n" }
     end
   end
 

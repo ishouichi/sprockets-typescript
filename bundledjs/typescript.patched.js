@@ -1,14 +1,14 @@
 /* *****************************************************************************
-Copyright (c) Microsoft Corporation. All rights reserved. 
+Copyright (c) Microsoft Corporation. All rights reserved.
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use
 this file except in compliance with the License. You may obtain a copy of the
-License at http://www.apache.org/licenses/LICENSE-2.0  
- 
+License at http://www.apache.org/licenses/LICENSE-2.0
+
 THIS CODE IS PROVIDED *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
 KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED
-WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A PARTICULAR PURPOSE, 
-MERCHANTABLITY OR NON-INFRINGEMENT. 
- 
+WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A PARTICULAR PURPOSE,
+MERCHANTABLITY OR NON-INFRINGEMENT.
+
 See the Apache Version 2.0 License for specific language governing permissions
 and limitations under the License.
 ***************************************************************************** */
@@ -538,7 +538,7 @@ var TypeScript;
         }
         return BlockIntrinsics;
     })();
-    TypeScript.BlockIntrinsics = BlockIntrinsics;    
+    TypeScript.BlockIntrinsics = BlockIntrinsics;
     var StringHashTable = (function () {
         function StringHashTable() {
             this.itemCount = 0;
@@ -613,7 +613,7 @@ var TypeScript;
         };
         return StringHashTable;
     })();
-    TypeScript.StringHashTable = StringHashTable;    
+    TypeScript.StringHashTable = StringHashTable;
     var DualStringHashTable = (function () {
         function DualStringHashTable(primaryTable, secondaryTable) {
             this.primaryTable = primaryTable;
@@ -660,7 +660,7 @@ var TypeScript;
         };
         return DualStringHashTable;
     })();
-    TypeScript.DualStringHashTable = DualStringHashTable;    
+    TypeScript.DualStringHashTable = DualStringHashTable;
     function numberHashFn(key) {
         var c2 = 668265261;
         key = (key ^ 61) ^ (key >>> 16);
@@ -682,7 +682,7 @@ var TypeScript;
         }
         return HashEntry;
     })();
-    TypeScript.HashEntry = HashEntry;    
+    TypeScript.HashEntry = HashEntry;
     var HashTable = (function () {
         function HashTable(size, hashFn, equalsFn) {
             this.size = size;
@@ -746,7 +746,7 @@ var TypeScript;
         };
         return HashTable;
     })();
-    TypeScript.HashTable = HashTable;    
+    TypeScript.HashTable = HashTable;
 })(TypeScript || (TypeScript = {}));
 
 var __extends = this.__extends || function (d, b) {
@@ -916,7 +916,7 @@ var TypeScript;
         };
         return AST;
     })();
-    TypeScript.AST = AST;    
+    TypeScript.AST = AST;
     var IncompleteAST = (function (_super) {
         __extends(IncompleteAST, _super);
         function IncompleteAST(min, lim) {
@@ -926,7 +926,7 @@ var TypeScript;
         }
         return IncompleteAST;
     })(AST);
-    TypeScript.IncompleteAST = IncompleteAST;    
+    TypeScript.IncompleteAST = IncompleteAST;
     var ASTList = (function (_super) {
         __extends(ASTList, _super);
         function ASTList() {
@@ -977,7 +977,7 @@ var TypeScript;
         };
         return ASTList;
     })(AST);
-    TypeScript.ASTList = ASTList;    
+    TypeScript.ASTList = ASTList;
     var Identifier = (function (_super) {
         __extends(Identifier, _super);
         function Identifier(text) {
@@ -1010,7 +1010,7 @@ var TypeScript;
         };
         return Identifier;
     })(AST);
-    TypeScript.Identifier = Identifier;    
+    TypeScript.Identifier = Identifier;
     var MissingIdentifier = (function (_super) {
         __extends(MissingIdentifier, _super);
         function MissingIdentifier() {
@@ -1023,7 +1023,7 @@ var TypeScript;
         };
         return MissingIdentifier;
     })(Identifier);
-    TypeScript.MissingIdentifier = MissingIdentifier;    
+    TypeScript.MissingIdentifier = MissingIdentifier;
     var Label = (function (_super) {
         __extends(Label, _super);
         function Label(id) {
@@ -1046,7 +1046,7 @@ var TypeScript;
         };
         return Label;
     })(AST);
-    TypeScript.Label = Label;    
+    TypeScript.Label = Label;
     var UnaryExpression = (function (_super) {
         __extends(UnaryExpression, _super);
         function UnaryExpression(nty, operand) {
@@ -1246,7 +1246,7 @@ var TypeScript;
         };
         return UnaryExpression;
     })(AST);
-    TypeScript.UnaryExpression = UnaryExpression;    
+    TypeScript.UnaryExpression = UnaryExpression;
     var CallExpression = (function (_super) {
         __extends(CallExpression, _super);
         function CallExpression(nty, target, args) {
@@ -1280,7 +1280,7 @@ var TypeScript;
         };
         return CallExpression;
     })(AST);
-    TypeScript.CallExpression = CallExpression;    
+    TypeScript.CallExpression = CallExpression;
     var BinaryExpression = (function (_super) {
         __extends(BinaryExpression, _super);
         function BinaryExpression(nty, operand1, operand2) {
@@ -1483,7 +1483,7 @@ var TypeScript;
         };
         return BinaryExpression;
     })(AST);
-    TypeScript.BinaryExpression = BinaryExpression;    
+    TypeScript.BinaryExpression = BinaryExpression;
     var TrinaryExpression = (function (_super) {
         __extends(TrinaryExpression, _super);
         function TrinaryExpression(nty, operand1, operand2, operand3) {
@@ -1512,7 +1512,7 @@ var TypeScript;
         };
         return TrinaryExpression;
     })(AST);
-    TypeScript.TrinaryExpression = TrinaryExpression;    
+    TypeScript.TrinaryExpression = TrinaryExpression;
     var NumberLiteral = (function (_super) {
         __extends(NumberLiteral, _super);
         function NumberLiteral(value) {
@@ -1549,7 +1549,7 @@ var TypeScript;
         };
         return NumberLiteral;
     })(AST);
-    TypeScript.NumberLiteral = NumberLiteral;    
+    TypeScript.NumberLiteral = NumberLiteral;
     var RegexLiteral = (function (_super) {
         __extends(RegexLiteral, _super);
         function RegexLiteral(regex) {
@@ -1572,7 +1572,7 @@ var TypeScript;
         };
         return RegexLiteral;
     })(AST);
-    TypeScript.RegexLiteral = RegexLiteral;    
+    TypeScript.RegexLiteral = RegexLiteral;
     var StringLiteral = (function (_super) {
         __extends(StringLiteral, _super);
         function StringLiteral(text) {
@@ -1601,7 +1601,7 @@ var TypeScript;
         };
         return StringLiteral;
     })(AST);
-    TypeScript.StringLiteral = StringLiteral;    
+    TypeScript.StringLiteral = StringLiteral;
     var ImportDecl = (function (_super) {
         __extends(ImportDecl, _super);
         function ImportDecl(id, alias) {
@@ -1660,7 +1660,7 @@ var TypeScript;
         };
         return ImportDecl;
     })(AST);
-    TypeScript.ImportDecl = ImportDecl;    
+    TypeScript.ImportDecl = ImportDecl;
     var BoundDecl = (function (_super) {
         __extends(BoundDecl, _super);
         function BoundDecl(id, nodeType, nestingLevel) {
@@ -1692,7 +1692,7 @@ var TypeScript;
         };
         return BoundDecl;
     })(AST);
-    TypeScript.BoundDecl = BoundDecl;    
+    TypeScript.BoundDecl = BoundDecl;
     var VarDecl = (function (_super) {
         __extends(VarDecl, _super);
         function VarDecl(id, nest) {
@@ -1715,7 +1715,7 @@ var TypeScript;
         };
         return VarDecl;
     })(BoundDecl);
-    TypeScript.VarDecl = VarDecl;    
+    TypeScript.VarDecl = VarDecl;
     var ArgDecl = (function (_super) {
         __extends(ArgDecl, _super);
         function ArgDecl(id) {
@@ -1741,7 +1741,7 @@ var TypeScript;
         };
         return ArgDecl;
     })(BoundDecl);
-    TypeScript.ArgDecl = ArgDecl;    
+    TypeScript.ArgDecl = ArgDecl;
     var internalId = 0;
     var FuncDecl = (function (_super) {
         __extends(FuncDecl, _super);
@@ -1902,7 +1902,7 @@ var TypeScript;
         };
         return FuncDecl;
     })(AST);
-    TypeScript.FuncDecl = FuncDecl;    
+    TypeScript.FuncDecl = FuncDecl;
     var LocationInfo = (function () {
         function LocationInfo(filename, lineMap, unitIndex) {
             this.filename = filename;
@@ -1911,7 +1911,7 @@ var TypeScript;
         }
         return LocationInfo;
     })();
-    TypeScript.LocationInfo = LocationInfo;    
+    TypeScript.LocationInfo = LocationInfo;
     TypeScript.unknownLocationInfo = new LocationInfo("unknown", null, -1);
     var Script = (function (_super) {
         __extends(Script, _super);
@@ -1986,7 +1986,7 @@ var TypeScript;
         };
         return Script;
     })(FuncDecl);
-    TypeScript.Script = Script;    
+    TypeScript.Script = Script;
     var Record = (function (_super) {
         __extends(Record, _super);
         function Record(nty, name, members) {
@@ -1997,7 +1997,7 @@ var TypeScript;
         }
         return Record;
     })(AST);
-    TypeScript.Record = Record;    
+    TypeScript.Record = Record;
     var ModuleDecl = (function (_super) {
         __extends(ModuleDecl, _super);
         function ModuleDecl(name, members, vars, scopes) {
@@ -2041,7 +2041,7 @@ var TypeScript;
         };
         return ModuleDecl;
     })(Record);
-    TypeScript.ModuleDecl = ModuleDecl;    
+    TypeScript.ModuleDecl = ModuleDecl;
     var NamedType = (function (_super) {
         __extends(NamedType, _super);
         function NamedType(nty, name, extendsList, implementsList, members) {
@@ -2053,7 +2053,7 @@ var TypeScript;
         }
         return NamedType;
     })(Record);
-    TypeScript.NamedType = NamedType;    
+    TypeScript.NamedType = NamedType;
     var ClassDecl = (function (_super) {
         __extends(ClassDecl, _super);
         function ClassDecl(name, definitionMembers, baseClass, implementsList) {
@@ -2085,7 +2085,7 @@ var TypeScript;
         };
         return ClassDecl;
     })(NamedType);
-    TypeScript.ClassDecl = ClassDecl;    
+    TypeScript.ClassDecl = ClassDecl;
     var TypeDecl = (function (_super) {
         __extends(TypeDecl, _super);
         function TypeDecl(nty, name, members, args, extendsList, implementsList) {
@@ -2125,7 +2125,7 @@ var TypeScript;
         };
         return TypeDecl;
     })(NamedType);
-    TypeScript.TypeDecl = TypeDecl;    
+    TypeScript.TypeDecl = TypeDecl;
     var Statement = (function (_super) {
         __extends(Statement, _super);
         function Statement(nty) {
@@ -2144,7 +2144,7 @@ var TypeScript;
         };
         return Statement;
     })(AST);
-    TypeScript.Statement = Statement;    
+    TypeScript.Statement = Statement;
     var LabeledStatement = (function (_super) {
         __extends(LabeledStatement, _super);
         function LabeledStatement(labels, stmt) {
@@ -2178,7 +2178,7 @@ var TypeScript;
         };
         return LabeledStatement;
     })(Statement);
-    TypeScript.LabeledStatement = LabeledStatement;    
+    TypeScript.LabeledStatement = LabeledStatement;
     var Block = (function (_super) {
         __extends(Block, _super);
         function Block(stmts, visible) {
@@ -2230,7 +2230,7 @@ var TypeScript;
         };
         return Block;
     })(Statement);
-    TypeScript.Block = Block;    
+    TypeScript.Block = Block;
     var Jump = (function (_super) {
         __extends(Jump, _super);
         function Jump(nty) {
@@ -2281,7 +2281,7 @@ var TypeScript;
         };
         return Jump;
     })(Statement);
-    TypeScript.Jump = Jump;    
+    TypeScript.Jump = Jump;
     var WhileStatement = (function (_super) {
         __extends(WhileStatement, _super);
         function WhileStatement(cond) {
@@ -2337,7 +2337,7 @@ var TypeScript;
         };
         return WhileStatement;
     })(Statement);
-    TypeScript.WhileStatement = WhileStatement;    
+    TypeScript.WhileStatement = WhileStatement;
     var DoWhileStatement = (function (_super) {
         __extends(DoWhileStatement, _super);
         function DoWhileStatement() {
@@ -2396,7 +2396,7 @@ var TypeScript;
         };
         return DoWhileStatement;
     })(Statement);
-    TypeScript.DoWhileStatement = DoWhileStatement;    
+    TypeScript.DoWhileStatement = DoWhileStatement;
     var IfStatement = (function (_super) {
         __extends(IfStatement, _super);
         function IfStatement(cond) {
@@ -2472,7 +2472,7 @@ var TypeScript;
         };
         return IfStatement;
     })(Statement);
-    TypeScript.IfStatement = IfStatement;    
+    TypeScript.IfStatement = IfStatement;
     var ReturnStatement = (function (_super) {
         __extends(ReturnStatement, _super);
         function ReturnStatement() {
@@ -2502,7 +2502,7 @@ var TypeScript;
         };
         return ReturnStatement;
     })(Statement);
-    TypeScript.ReturnStatement = ReturnStatement;    
+    TypeScript.ReturnStatement = ReturnStatement;
     var EndCode = (function (_super) {
         __extends(EndCode, _super);
         function EndCode() {
@@ -2510,7 +2510,7 @@ var TypeScript;
         }
         return EndCode;
     })(AST);
-    TypeScript.EndCode = EndCode;    
+    TypeScript.EndCode = EndCode;
     var ForInStatement = (function (_super) {
         __extends(ForInStatement, _super);
         function ForInStatement(lval, obj) {
@@ -2622,7 +2622,7 @@ var TypeScript;
         };
         return ForInStatement;
     })(Statement);
-    TypeScript.ForInStatement = ForInStatement;    
+    TypeScript.ForInStatement = ForInStatement;
     var ForStatement = (function (_super) {
         __extends(ForStatement, _super);
         function ForStatement(init) {
@@ -2715,7 +2715,7 @@ var TypeScript;
         };
         return ForStatement;
     })(Statement);
-    TypeScript.ForStatement = ForStatement;    
+    TypeScript.ForStatement = ForStatement;
     var WithStatement = (function (_super) {
         __extends(WithStatement, _super);
         function WithStatement(expr) {
@@ -2746,7 +2746,7 @@ var TypeScript;
         };
         return WithStatement;
     })(Statement);
-    TypeScript.WithStatement = WithStatement;    
+    TypeScript.WithStatement = WithStatement;
     var SwitchStatement = (function (_super) {
         __extends(SwitchStatement, _super);
         function SwitchStatement(val) {
@@ -2817,7 +2817,7 @@ var TypeScript;
         };
         return SwitchStatement;
     })(Statement);
-    TypeScript.SwitchStatement = SwitchStatement;    
+    TypeScript.SwitchStatement = SwitchStatement;
     var CaseStatement = (function (_super) {
         __extends(CaseStatement, _super);
         function CaseStatement() {
@@ -2865,7 +2865,7 @@ var TypeScript;
         };
         return CaseStatement;
     })(Statement);
-    TypeScript.CaseStatement = CaseStatement;    
+    TypeScript.CaseStatement = CaseStatement;
     var TypeReference = (function (_super) {
         __extends(TypeReference, _super);
         function TypeReference(term, arrayCount) {
@@ -2891,7 +2891,7 @@ var TypeScript;
         };
         return TypeReference;
     })(AST);
-    TypeScript.TypeReference = TypeReference;    
+    TypeScript.TypeReference = TypeReference;
     var TryFinally = (function (_super) {
         __extends(TryFinally, _super);
         function TryFinally(tryNode, finallyNode) {
@@ -2940,7 +2940,7 @@ var TypeScript;
         };
         return TryFinally;
     })(Statement);
-    TypeScript.TryFinally = TryFinally;    
+    TypeScript.TryFinally = TryFinally;
     var TryCatch = (function (_super) {
         __extends(TryCatch, _super);
         function TryCatch(tryNode, catchNode) {
@@ -2995,7 +2995,7 @@ var TypeScript;
         };
         return TryCatch;
     })(Statement);
-    TypeScript.TryCatch = TryCatch;    
+    TypeScript.TryCatch = TryCatch;
     var Try = (function (_super) {
         __extends(Try, _super);
         function Try(body) {
@@ -3026,7 +3026,7 @@ var TypeScript;
         };
         return Try;
     })(Statement);
-    TypeScript.Try = Try;    
+    TypeScript.Try = Try;
     var Catch = (function (_super) {
         __extends(Catch, _super);
         function Catch(param, body) {
@@ -3089,7 +3089,7 @@ var TypeScript;
         };
         return Catch;
     })(Statement);
-    TypeScript.Catch = Catch;    
+    TypeScript.Catch = Catch;
     var Finally = (function (_super) {
         __extends(Finally, _super);
         function Finally(body) {
@@ -3117,7 +3117,7 @@ var TypeScript;
         };
         return Finally;
     })(Statement);
-    TypeScript.Finally = Finally;    
+    TypeScript.Finally = Finally;
     var Comment = (function (_super) {
         __extends(Comment, _super);
         function Comment(content, isBlockComment, endsLine) {
@@ -3144,7 +3144,7 @@ var TypeScript;
         };
         return Comment;
     })(AST);
-    TypeScript.Comment = Comment;    
+    TypeScript.Comment = Comment;
     var DebuggerStatement = (function (_super) {
         __extends(DebuggerStatement, _super);
         function DebuggerStatement() {
@@ -3159,7 +3159,7 @@ var TypeScript;
         };
         return DebuggerStatement;
     })(Statement);
-    TypeScript.DebuggerStatement = DebuggerStatement;    
+    TypeScript.DebuggerStatement = DebuggerStatement;
 })(TypeScript || (TypeScript = {}));
 
 var TypeScript;
@@ -3177,7 +3177,7 @@ var TypeScript;
         };
         return AstWalkOptions;
     })();
-    TypeScript.AstWalkOptions = AstWalkOptions;    
+    TypeScript.AstWalkOptions = AstWalkOptions;
     var AstWalker = (function () {
         function AstWalker(childrenWalkers, pre, post, options, state) {
             this.childrenWalkers = childrenWalkers;
@@ -3210,7 +3210,7 @@ var TypeScript;
             }
         };
         return AstWalker;
-    })();    
+    })();
     var AstWalkerFactory = (function () {
         function AstWalkerFactory() {
             this.childrenWalkers = [];
@@ -3344,7 +3344,7 @@ var TypeScript;
         };
         return AstWalkerFactory;
     })();
-    TypeScript.AstWalkerFactory = AstWalkerFactory;    
+    TypeScript.AstWalkerFactory = AstWalkerFactory;
     var globalAstWalkerFactory;
     function getAstWalkerFactory() {
         if(!globalAstWalkerFactory) {
@@ -3900,7 +3900,7 @@ var TypeScript;
         };
         return AstPath;
     })();
-    TypeScript.AstPath = AstPath;    
+    TypeScript.AstPath = AstPath;
     function isValidAstNode(ast) {
         if(ast === null) {
             return false;
@@ -3917,7 +3917,7 @@ var TypeScript;
         }
         return AstPathContext;
     })();
-    TypeScript.AstPathContext = AstPathContext;    
+    TypeScript.AstPathContext = AstPathContext;
     (function (GetAstPathOptions) {
         GetAstPathOptions._map = [];
         GetAstPathOptions.Default = 0;
@@ -4086,7 +4086,7 @@ var TypeScript;
         };
         return AstLogger;
     })();
-    TypeScript.AstLogger = AstLogger;    
+    TypeScript.AstLogger = AstLogger;
 })(TypeScript || (TypeScript = {}));
 
 var TypeScript;
@@ -4273,7 +4273,7 @@ var TypeScript;
         };
         return Binder;
     })();
-    TypeScript.Binder = Binder;    
+    TypeScript.Binder = Binder;
 })(TypeScript || (TypeScript = {}));
 
 var TypeScript;
@@ -4295,7 +4295,7 @@ var TypeScript;
             }
         }
         return Base64Format;
-    })();    
+    })();
     var Base64VLQFormat = (function () {
         function Base64VLQFormat() { }
         Base64VLQFormat.encode = function encode(inValue) {
@@ -4342,7 +4342,7 @@ var TypeScript;
         }
         return Base64VLQFormat;
     })();
-    TypeScript.Base64VLQFormat = Base64VLQFormat;    
+    TypeScript.Base64VLQFormat = Base64VLQFormat;
 })(TypeScript || (TypeScript = {}));
 
 var TypeScript;
@@ -4354,7 +4354,7 @@ var TypeScript;
         }
         return SourceMapping;
     })();
-    TypeScript.SourceMapping = SourceMapping;    
+    TypeScript.SourceMapping = SourceMapping;
     var SourceMapper = (function () {
         function SourceMapper(tsFileName, jsFileName, jsFile, sourceMapOut) {
             this.jsFile = jsFile;
@@ -4435,7 +4435,7 @@ var TypeScript;
         }
         return SourceMapper;
     })();
-    TypeScript.SourceMapper = SourceMapper;    
+    TypeScript.SourceMapper = SourceMapper;
 })(TypeScript || (TypeScript = {}));
 
 var TypeScript;
@@ -4472,7 +4472,7 @@ var TypeScript;
         }
         return EmitState;
     })();
-    TypeScript.EmitState = EmitState;    
+    TypeScript.EmitState = EmitState;
     var Emitter = (function () {
         function Emitter(checker, outfile, emitOptions) {
             this.checker = checker;
@@ -6323,7 +6323,7 @@ var TypeScript;
         };
         return Emitter;
     })();
-    TypeScript.Emitter = Emitter;    
+    TypeScript.Emitter = Emitter;
 })(TypeScript || (TypeScript = {}));
 
 var TypeScript;
@@ -6490,7 +6490,7 @@ var TypeScript;
         };
         return ErrorReporter;
     })();
-    TypeScript.ErrorReporter = ErrorReporter;    
+    TypeScript.ErrorReporter = ErrorReporter;
 })(TypeScript || (TypeScript = {}));
 
 var TypeScript;
@@ -6544,7 +6544,7 @@ var TypeScript;
         }
         return QuickParseResult;
     })();
-    TypeScript.QuickParseResult = QuickParseResult;    
+    TypeScript.QuickParseResult = QuickParseResult;
     var Parser = (function () {
         function Parser() {
             this.varLists = [];
@@ -10001,7 +10001,7 @@ var TypeScript;
         };
         return Parser;
     })();
-    TypeScript.Parser = Parser;    
+    TypeScript.Parser = Parser;
     function quickParse(logger, scopeStartAST, sourceText, minChar, limChar, errorCapture) {
         var fragment = sourceText.getText(minChar, limChar);
         logger.log("Quick parse range (" + minChar + "," + limChar + "): \"" + TypeScript.stringToLiteral(fragment, 100) + "\"");
@@ -10057,7 +10057,7 @@ var TypeScript;
         };
         return PrintContext;
     })();
-    TypeScript.PrintContext = PrintContext;    
+    TypeScript.PrintContext = PrintContext;
     function prePrintAST(ast, parent, walker) {
         var pc = walker.state;
         ast.print(pc);
@@ -10248,7 +10248,7 @@ var TypeScript;
         };
         return StringSourceText;
     })();
-    TypeScript.StringSourceText = StringSourceText;    
+    TypeScript.StringSourceText = StringSourceText;
     var SourceTextSegment = (function () {
         function SourceTextSegment(segmentStart, segmentEnd, segment) {
             this.segmentStart = segmentStart;
@@ -10263,7 +10263,7 @@ var TypeScript;
         };
         return SourceTextSegment;
     })();
-    TypeScript.SourceTextSegment = SourceTextSegment;    
+    TypeScript.SourceTextSegment = SourceTextSegment;
     var AggerateSourceTextSegment = (function () {
         function AggerateSourceTextSegment(seg1, seg2) {
             this.seg1 = seg1;
@@ -10283,7 +10283,7 @@ var TypeScript;
         };
         return AggerateSourceTextSegment;
     })();
-    TypeScript.AggerateSourceTextSegment = AggerateSourceTextSegment;    
+    TypeScript.AggerateSourceTextSegment = AggerateSourceTextSegment;
     var ScannerTextStream = (function () {
         function ScannerTextStream(sourceText) {
             this.sourceText = sourceText;
@@ -10322,7 +10322,7 @@ var TypeScript;
         };
         return ScannerTextStream;
     })();
-    TypeScript.ScannerTextStream = ScannerTextStream;    
+    TypeScript.ScannerTextStream = ScannerTextStream;
     var SavedTokens = (function () {
         function SavedTokens() {
             this.prevToken = null;
@@ -10439,7 +10439,7 @@ var TypeScript;
         };
         return SavedTokens;
     })();
-    TypeScript.SavedTokens = SavedTokens;    
+    TypeScript.SavedTokens = SavedTokens;
     var Scanner = (function () {
         function Scanner() {
             this.prevLine = 1;
@@ -11230,7 +11230,7 @@ var TypeScript;
         };
         return Scanner;
     })();
-    TypeScript.Scanner = Scanner;    
+    TypeScript.Scanner = Scanner;
     function convertTokToIDName(tok) {
         return convertTokToIDBase(tok, true, false);
     }
@@ -11314,7 +11314,7 @@ var TypeScript;
         }
         return AssignScopeContext;
     })();
-    TypeScript.AssignScopeContext = AssignScopeContext;    
+    TypeScript.AssignScopeContext = AssignScopeContext;
     function pushAssignScope(scope, context, type, classType, fnc) {
         var chain = new TypeScript.ScopeChain(null, context.scopeChain, scope);
         chain.thisType = type;
@@ -11358,7 +11358,7 @@ var TypeScript;
         };
         return ScopeSearchFilter;
     })();
-    TypeScript.ScopeSearchFilter = ScopeSearchFilter;    
+    TypeScript.ScopeSearchFilter = ScopeSearchFilter;
     TypeScript.instanceFilter = new ScopeSearchFilter(instanceCompare, instanceFilterStop);
     function preAssignModuleScopes(ast, context) {
         var moduleDecl = ast;
@@ -11677,7 +11677,7 @@ var TypeScript;
         }
         return TypeCollectionContext;
     })();
-    TypeScript.TypeCollectionContext = TypeCollectionContext;    
+    TypeScript.TypeCollectionContext = TypeCollectionContext;
     var MemberScopeContext = (function () {
         function MemberScopeContext(flow, pos, matchFlag) {
             this.flow = flow;
@@ -11689,7 +11689,7 @@ var TypeScript;
         }
         return MemberScopeContext;
     })();
-    TypeScript.MemberScopeContext = MemberScopeContext;    
+    TypeScript.MemberScopeContext = MemberScopeContext;
     var EnclosingScopeContext = (function () {
         function EnclosingScopeContext(logger, script, text, pos, isMemberCompletion) {
             this.logger = logger;
@@ -11736,7 +11736,7 @@ var TypeScript;
         };
         return EnclosingScopeContext;
     })();
-    TypeScript.EnclosingScopeContext = EnclosingScopeContext;    
+    TypeScript.EnclosingScopeContext = EnclosingScopeContext;
     function preFindMemberScope(ast, parent, walker) {
         var memScope = walker.state;
         if(TypeScript.hasFlag(ast.flags, memScope.matchFlag) && ((memScope.pos < 0) || (memScope.pos == ast.limChar))) {
@@ -11950,7 +11950,7 @@ var TypeScript;
         };
         return Signature;
     })();
-    TypeScript.Signature = Signature;    
+    TypeScript.Signature = Signature;
     var SignatureGroup = (function () {
         function SignatureGroup() {
             this.signatures = [];
@@ -12036,7 +12036,7 @@ var TypeScript;
         };
         return SignatureGroup;
     })();
-    TypeScript.SignatureGroup = SignatureGroup;    
+    TypeScript.SignatureGroup = SignatureGroup;
 })(TypeScript || (TypeScript = {}));
 
 var TypeScript;
@@ -12245,12 +12245,12 @@ var TypeScript;
         };
         return Symbol;
     })();
-    TypeScript.Symbol = Symbol;    
+    TypeScript.Symbol = Symbol;
     var ValueLocation = (function () {
         function ValueLocation() { }
         return ValueLocation;
     })();
-    TypeScript.ValueLocation = ValueLocation;    
+    TypeScript.ValueLocation = ValueLocation;
     var InferenceSymbol = (function (_super) {
         __extends(InferenceSymbol, _super);
         function InferenceSymbol(name, location, unitIndex) {
@@ -12288,7 +12288,7 @@ var TypeScript;
         };
         return InferenceSymbol;
     })(Symbol);
-    TypeScript.InferenceSymbol = InferenceSymbol;    
+    TypeScript.InferenceSymbol = InferenceSymbol;
     var TypeSymbol = (function (_super) {
         __extends(TypeSymbol, _super);
         function TypeSymbol(locName, location, unitIndex, type) {
@@ -12366,7 +12366,7 @@ var TypeScript;
         };
         return TypeSymbol;
     })(InferenceSymbol);
-    TypeScript.TypeSymbol = TypeSymbol;    
+    TypeScript.TypeSymbol = TypeSymbol;
     var WithSymbol = (function (_super) {
         __extends(WithSymbol, _super);
         function WithSymbol(location, unitIndex, withType) {
@@ -12377,7 +12377,7 @@ var TypeScript;
         };
         return WithSymbol;
     })(TypeSymbol);
-    TypeScript.WithSymbol = WithSymbol;    
+    TypeScript.WithSymbol = WithSymbol;
     var FieldSymbol = (function (_super) {
         __extends(FieldSymbol, _super);
         function FieldSymbol(name, location, unitIndex, canWrite, field) {
@@ -12434,7 +12434,7 @@ var TypeScript;
         };
         return FieldSymbol;
     })(InferenceSymbol);
-    TypeScript.FieldSymbol = FieldSymbol;    
+    TypeScript.FieldSymbol = FieldSymbol;
     var ParameterSymbol = (function (_super) {
         __extends(ParameterSymbol, _super);
         function ParameterSymbol(name, location, unitIndex, parameter) {
@@ -12486,7 +12486,7 @@ var TypeScript;
         };
         return ParameterSymbol;
     })(InferenceSymbol);
-    TypeScript.ParameterSymbol = ParameterSymbol;    
+    TypeScript.ParameterSymbol = ParameterSymbol;
     var VariableSymbol = (function (_super) {
         __extends(VariableSymbol, _super);
         function VariableSymbol(name, location, unitIndex, variable) {
@@ -12513,7 +12513,7 @@ var TypeScript;
         };
         return VariableSymbol;
     })(InferenceSymbol);
-    TypeScript.VariableSymbol = VariableSymbol;    
+    TypeScript.VariableSymbol = VariableSymbol;
 })(TypeScript || (TypeScript = {}));
 
 var TypeScript;
@@ -12533,7 +12533,7 @@ var TypeScript;
         };
         return ScopedMembers;
     })();
-    TypeScript.ScopedMembers = ScopedMembers;    
+    TypeScript.ScopedMembers = ScopedMembers;
     (function (SymbolKind) {
         SymbolKind._map = [];
         SymbolKind._map[0] = "None";
@@ -12558,28 +12558,28 @@ var TypeScript;
         };
         SymbolScope.prototype.getAllSymbolNames = function (members) {
             return [
-                "please", 
-                "implement", 
-                "in", 
-                "derived", 
+                "please",
+                "implement",
+                "in",
+                "derived",
                 "classes"
             ];
         };
         SymbolScope.prototype.getAllTypeSymbolNames = function (members) {
             return [
-                "please", 
-                "implement", 
-                "in", 
-                "derived", 
+                "please",
+                "implement",
+                "in",
+                "derived",
                 "classes"
             ];
         };
         SymbolScope.prototype.getAllValueSymbolNames = function (members) {
             return [
-                "please", 
-                "implement", 
-                "in", 
-                "derived", 
+                "please",
+                "implement",
+                "in",
+                "derived",
                 "classes"
             ];
         };
@@ -12613,7 +12613,7 @@ var TypeScript;
         };
         return SymbolScope;
     })();
-    TypeScript.SymbolScope = SymbolScope;    
+    TypeScript.SymbolScope = SymbolScope;
     function symbolCanBeUsed(sym, publicOnly) {
         return publicOnly ? !(TypeScript.hasFlag(sym.flags, TypeScript.SymbolFlags.Private) || (sym.declAST && sym.declAST.nodeType == TypeScript.NodeType.FuncDecl && TypeScript.hasFlag((sym.declAST).fncFlags, TypeScript.FncFlags.Private))) : true;
     }
@@ -12788,7 +12788,7 @@ var TypeScript;
         };
         return SymbolAggregateScope;
     })(SymbolScope);
-    TypeScript.SymbolAggregateScope = SymbolAggregateScope;    
+    TypeScript.SymbolAggregateScope = SymbolAggregateScope;
     var SymbolTableScope = (function (_super) {
         __extends(SymbolTableScope, _super);
         function SymbolTableScope(valueMembers, ambientValueMembers, enclosedTypes, ambientEnclosedTypes, container) {
@@ -12917,7 +12917,7 @@ var TypeScript;
         };
         return SymbolTableScope;
     })(SymbolScope);
-    TypeScript.SymbolTableScope = SymbolTableScope;    
+    TypeScript.SymbolTableScope = SymbolTableScope;
     var SymbolScopeBuilder = (function (_super) {
         __extends(SymbolScopeBuilder, _super);
         function SymbolScopeBuilder(valueMembers, ambientValueMembers, enclosedTypes, ambientEnclosedTypes, parent, container) {
@@ -13116,7 +13116,7 @@ var TypeScript;
         };
         return SymbolScopeBuilder;
     })(SymbolScope);
-    TypeScript.SymbolScopeBuilder = SymbolScopeBuilder;    
+    TypeScript.SymbolScopeBuilder = SymbolScopeBuilder;
     var FilteredSymbolScope = (function (_super) {
         __extends(FilteredSymbolScope, _super);
         function FilteredSymbolScope(scope, container, filter) {
@@ -13136,7 +13136,7 @@ var TypeScript;
         };
         return FilteredSymbolScope;
     })(SymbolScope);
-    TypeScript.FilteredSymbolScope = FilteredSymbolScope;    
+    TypeScript.FilteredSymbolScope = FilteredSymbolScope;
     var FilteredSymbolScopeBuilder = (function (_super) {
         __extends(FilteredSymbolScopeBuilder, _super);
         function FilteredSymbolScopeBuilder(valueMembers, parent, container, filter) {
@@ -13166,7 +13166,7 @@ var TypeScript;
         };
         return FilteredSymbolScopeBuilder;
     })(SymbolScopeBuilder);
-    TypeScript.FilteredSymbolScopeBuilder = FilteredSymbolScopeBuilder;    
+    TypeScript.FilteredSymbolScopeBuilder = FilteredSymbolScopeBuilder;
 })(TypeScript || (TypeScript = {}));
 
 var TypeScript;
@@ -13483,7 +13483,7 @@ var TypeScript;
         }
         return TokenInfo;
     })();
-    TypeScript.TokenInfo = TokenInfo;    
+    TypeScript.TokenInfo = TokenInfo;
     function setTokenInfo(tokenId, reservation, binopPrecedence, binopNodeType, unopPrecedence, unopNodeType, text, ers) {
         if(tokenId !== undefined) {
             TypeScript.tokenTable[tokenId] = new TokenInfo(tokenId, reservation, binopPrecedence, binopNodeType, unopPrecedence, unopNodeType, text, ers);
@@ -13636,7 +13636,7 @@ var TypeScript;
         }
         return SavedToken;
     })();
-    TypeScript.SavedToken = SavedToken;    
+    TypeScript.SavedToken = SavedToken;
     var Token = (function () {
         function Token(tokenId) {
             this.tokenId = tokenId;
@@ -13665,7 +13665,7 @@ var TypeScript;
         };
         return Token;
     })();
-    TypeScript.Token = Token;    
+    TypeScript.Token = Token;
     var NumberToken = (function (_super) {
         __extends(NumberToken, _super);
         function NumberToken(value) {
@@ -13680,7 +13680,7 @@ var TypeScript;
         };
         return NumberToken;
     })(Token);
-    TypeScript.NumberToken = NumberToken;    
+    TypeScript.NumberToken = NumberToken;
     var StringToken = (function (_super) {
         __extends(StringToken, _super);
         function StringToken(tokenId, value) {
@@ -13700,7 +13700,7 @@ var TypeScript;
         };
         return StringToken;
     })(Token);
-    TypeScript.StringToken = StringToken;    
+    TypeScript.StringToken = StringToken;
     var WhitespaceToken = (function (_super) {
         __extends(WhitespaceToken, _super);
         function WhitespaceToken(tokenId, value) {
@@ -13716,7 +13716,7 @@ var TypeScript;
         };
         return WhitespaceToken;
     })(Token);
-    TypeScript.WhitespaceToken = WhitespaceToken;    
+    TypeScript.WhitespaceToken = WhitespaceToken;
     var CommentToken = (function (_super) {
         __extends(CommentToken, _super);
         function CommentToken(tokenID, value, isBlock, startPos, line, endsLine) {
@@ -13736,7 +13736,7 @@ var TypeScript;
         };
         return CommentToken;
     })(Token);
-    TypeScript.CommentToken = CommentToken;    
+    TypeScript.CommentToken = CommentToken;
     var RegexToken = (function (_super) {
         __extends(RegexToken, _super);
         function RegexToken(regex) {
@@ -13751,7 +13751,7 @@ var TypeScript;
         };
         return RegexToken;
     })(Token);
-    TypeScript.RegexToken = RegexToken;    
+    TypeScript.RegexToken = RegexToken;
     TypeScript.staticTokens = new Array();
     function initializeStaticTokens() {
         for(var i = 0; i <= TokenID.LimFixed; i++) {
@@ -13775,7 +13775,7 @@ var TypeScript;
         };
         return ArrayCache;
     })();
-    TypeScript.ArrayCache = ArrayCache;    
+    TypeScript.ArrayCache = ArrayCache;
     var TypeComparisonInfo = (function () {
         function TypeComparisonInfo() {
             this.onlyCaptureFirstError = false;
@@ -13794,7 +13794,7 @@ var TypeScript;
         };
         return TypeComparisonInfo;
     })();
-    TypeScript.TypeComparisonInfo = TypeComparisonInfo;    
+    TypeScript.TypeComparisonInfo = TypeComparisonInfo;
     (function (TypeCheckCollectionMode) {
         TypeCheckCollectionMode._map = [];
         TypeCheckCollectionMode._map[0] = "Resident";
@@ -13883,7 +13883,7 @@ var TypeScript;
         };
         return PersistentGlobalTypeState;
     })();
-    TypeScript.PersistentGlobalTypeState = PersistentGlobalTypeState;    
+    TypeScript.PersistentGlobalTypeState = PersistentGlobalTypeState;
     var ContextualTypeContext = (function () {
         function ContextualTypeContext(contextualType, provisional, contextID) {
             this.contextualType = contextualType;
@@ -13895,7 +13895,7 @@ var TypeScript;
         }
         return ContextualTypeContext;
     })();
-    TypeScript.ContextualTypeContext = ContextualTypeContext;    
+    TypeScript.ContextualTypeContext = ContextualTypeContext;
     var ContextualTypingContextStack = (function () {
         function ContextualTypingContextStack(checker) {
             this.checker = checker;
@@ -13925,7 +13925,7 @@ var TypeScript;
         };
         return ContextualTypingContextStack;
     })();
-    TypeScript.ContextualTypingContextStack = ContextualTypingContextStack;    
+    TypeScript.ContextualTypingContextStack = ContextualTypingContextStack;
     var TypeChecker = (function () {
         function TypeChecker(persistentState) {
             this.persistentState = persistentState;
@@ -14405,7 +14405,7 @@ var TypeScript;
                     var strippedIdText = TypeScript.stripQuotes(idText);
                     var path = TypeScript.getRootFilePath(TypeScript.switchToForwardSlashes(currentFileName));
                     while(symbol == null && path != "" && path != "/") {
-                        idText = TypeScript.normalizePath(path + strippedIdText + ".ts");
+                        idText = TypeScript.normalizePath(path + strippedIdText + ".js.ts");
                         symbol = search(idText);
                         if(symbol == null) {
                             idText = TypeScript.changePathToSTR(idText);
@@ -15401,7 +15401,7 @@ var TypeScript;
         };
         return TypeChecker;
     })();
-    TypeScript.TypeChecker = TypeChecker;    
+    TypeScript.TypeChecker = TypeChecker;
 })(TypeScript || (TypeScript = {}));
 
 var TypeScript;
@@ -15413,7 +15413,7 @@ var TypeScript;
         }
         return Continuation;
     })();
-    TypeScript.Continuation = Continuation;    
+    TypeScript.Continuation = Continuation;
     function getBaseTypeLinks(bases, baseTypeLinks) {
         if(bases) {
             var len = bases.members.length;
@@ -15494,6 +15494,7 @@ var TypeScript;
                         return context.members.lookup(name);
                     } else {
                         return findTypeSymbolInScopeChain(name, context.topLevelScope);
+                        throw 1;
                     }
                 };
                 if(isDynamic) {
@@ -16044,7 +16045,7 @@ var TypeScript;
         }
         return ScopeChain;
     })();
-    TypeScript.ScopeChain = ScopeChain;    
+    TypeScript.ScopeChain = ScopeChain;
     var BBUseDefInfo = (function () {
         function BBUseDefInfo(bb) {
             this.bb = bb;
@@ -16164,7 +16165,7 @@ var TypeScript;
         };
         return BBUseDefInfo;
     })();
-    TypeScript.BBUseDefInfo = BBUseDefInfo;    
+    TypeScript.BBUseDefInfo = BBUseDefInfo;
     var UseDefContext = (function () {
         function UseDefContext() {
             this.useIndexBySymbol = new Array();
@@ -16207,7 +16208,7 @@ var TypeScript;
         };
         return UseDefContext;
     })();
-    TypeScript.UseDefContext = UseDefContext;    
+    TypeScript.UseDefContext = UseDefContext;
     var BitVector = (function () {
         function BitVector(bitCount) {
             this.bitCount = bitCount;
@@ -16314,7 +16315,7 @@ var TypeScript;
         };
         return BitVector;
     })();
-    TypeScript.BitVector = BitVector;    
+    TypeScript.BitVector = BitVector;
     var BasicBlock = (function () {
         function BasicBlock() {
             this.predecessors = new Array();
@@ -16336,7 +16337,7 @@ var TypeScript;
         };
         return BasicBlock;
     })();
-    TypeScript.BasicBlock = BasicBlock;    
+    TypeScript.BasicBlock = BasicBlock;
     var ControlFlowContext = (function () {
         function ControlFlowContext(current, exit) {
             this.current = current;
@@ -16528,7 +16529,7 @@ var TypeScript;
         };
         return ControlFlowContext;
     })();
-    TypeScript.ControlFlowContext = ControlFlowContext;    
+    TypeScript.ControlFlowContext = ControlFlowContext;
     var ResolutionDataCache = (function () {
         function ResolutionDataCache() {
             this.cacheSize = 16;
@@ -16569,7 +16570,7 @@ var TypeScript;
         };
         return ResolutionDataCache;
     })();
-    TypeScript.ResolutionDataCache = ResolutionDataCache;    
+    TypeScript.ResolutionDataCache = ResolutionDataCache;
     var TypeFlow = (function () {
         function TypeFlow(logger, initScope, parser, checker) {
             this.logger = logger;
@@ -18947,7 +18948,7 @@ var TypeScript;
         };
         return TypeFlow;
     })();
-    TypeScript.TypeFlow = TypeFlow;    
+    TypeScript.TypeFlow = TypeFlow;
 })(TypeScript || (TypeScript = {}));
 
 var TypeScript;
@@ -19010,7 +19011,7 @@ var TypeScript;
         }
         return MemberName;
     })();
-    TypeScript.MemberName = MemberName;    
+    TypeScript.MemberName = MemberName;
     var MemberNameString = (function (_super) {
         __extends(MemberNameString, _super);
         function MemberNameString(text) {
@@ -19022,7 +19023,7 @@ var TypeScript;
         };
         return MemberNameString;
     })(MemberName);
-    TypeScript.MemberNameString = MemberNameString;    
+    TypeScript.MemberNameString = MemberNameString;
     var MemberNameArray = (function (_super) {
         __extends(MemberNameArray, _super);
         function MemberNameArray() {
@@ -19044,7 +19045,7 @@ var TypeScript;
         };
         return MemberNameArray;
     })(MemberName);
-    TypeScript.MemberNameArray = MemberNameArray;    
+    TypeScript.MemberNameArray = MemberNameArray;
     var currentTypeID = -1;
     var Type = (function () {
         function Type() {
@@ -19405,7 +19406,7 @@ var TypeScript;
         };
         return Type;
     })();
-    TypeScript.Type = Type;    
+    TypeScript.Type = Type;
     var ModuleType = (function (_super) {
         __extends(ModuleType, _super);
         function ModuleType(enclosedTypes, ambientEnclosedTypes) {
@@ -19434,7 +19435,7 @@ var TypeScript;
         };
         return ModuleType;
     })(Type);
-    TypeScript.ModuleType = ModuleType;    
+    TypeScript.ModuleType = ModuleType;
     var TypeLink = (function () {
         function TypeLink() {
             this.type = null;
@@ -19442,7 +19443,7 @@ var TypeScript;
         }
         return TypeLink;
     })();
-    TypeScript.TypeLink = TypeLink;    
+    TypeScript.TypeLink = TypeLink;
     function getTypeLink(ast, checker, autoVar) {
         var result = new TypeLink();
         result.ast = ast;
@@ -19594,6 +19595,19 @@ var TypeScript;
     TypeScript.pathNormalizeRegExp = /\//g;
     function normalizePath(path) {
         path = switchToForwardSlashes(path);
+        var startedWithSep = path.charAt(0) === "/";
+        var parts = path.split("/");
+        for(var i = 0; i < parts.length; i++) {
+            if(parts[i] === "." || parts[i] === "") {
+                parts.splice(i, 1);
+                i--;
+            }
+            if(i > 0 && parts[i] === ".." && parts[i - 1] !== "..") {
+                parts.splice(i - 1, 2);
+                i -= 2;
+            }
+        }
+        return (startedWithSep ? "/" : "") + parts.join("/");
         return path;
     }
     TypeScript.normalizePath = normalizePath;
@@ -19618,7 +19632,7 @@ var TypeScript;
         };
         return SourceUnit;
     })();
-    TypeScript.SourceUnit = SourceUnit;    
+    TypeScript.SourceUnit = SourceUnit;
     var CompilationEnvironment = (function () {
         function CompilationEnvironment(compilationSettings, ioHost) {
             this.compilationSettings = compilationSettings;
@@ -19628,7 +19642,7 @@ var TypeScript;
         }
         return CompilationEnvironment;
     })();
-    TypeScript.CompilationEnvironment = CompilationEnvironment;    
+    TypeScript.CompilationEnvironment = CompilationEnvironment;
     var CodeResolver = (function () {
         function CodeResolver(environment) {
             this.environment = environment;
@@ -19736,7 +19750,7 @@ var TypeScript;
         };
         return CodeResolver;
     })();
-    TypeScript.CodeResolver = CodeResolver;    
+    TypeScript.CodeResolver = CodeResolver;
 })(TypeScript || (TypeScript = {}));
 
 var TypeScript;
@@ -19789,7 +19803,7 @@ var TypeScript;
         };
         return StyleSettings;
     })();
-    TypeScript.StyleSettings = StyleSettings;    
+    TypeScript.StyleSettings = StyleSettings;
     var CompilationSettings = (function () {
         function CompilationSettings() {
             this.styleSettings = new StyleSettings();
@@ -19827,13 +19841,13 @@ var TypeScript;
         };
         return CompilationSettings;
     })();
-    TypeScript.CompilationSettings = CompilationSettings;    
+    TypeScript.CompilationSettings = CompilationSettings;
     function getFileReferenceFromReferencePath(comment) {
         var referencesRegEx = /^(\/\/\/\s*<reference\s+path=)('|")(.+?)\2\s*(static=('|")(.+?)\2\s*)*\/>/igm;
         var match = referencesRegEx.exec(comment);
         if(match) {
-            var path = TypeScript.normalizePath(match[3]);
-            var adjustedPath = TypeScript.normalizePath(path);
+            var path = match[3];
+            var adjustedPath = path;
             var isResident = match.length >= 7 && match[6] == "true";
             if(isResident) {
                 TypeScript.CompilerDiagnostics.debugPrint(path + " is resident");
@@ -20215,7 +20229,7 @@ var TypeScript;
         };
         return IncrementalParser;
     })();
-    TypeScript.IncrementalParser = IncrementalParser;    
+    TypeScript.IncrementalParser = IncrementalParser;
 })(TypeScript || (TypeScript = {}));
 
 var TypeScript;
@@ -20251,7 +20265,7 @@ var TypeScript;
         };
         return ScriptEditRange;
     })();
-    TypeScript.ScriptEditRange = ScriptEditRange;    
+    TypeScript.ScriptEditRange = ScriptEditRange;
     var UpdateUnitResult = (function () {
         function UpdateUnitResult(kind, unitIndex, script1, script2) {
             this.kind = kind;
@@ -20281,7 +20295,7 @@ var TypeScript;
         }
         return UpdateUnitResult;
     })();
-    TypeScript.UpdateUnitResult = UpdateUnitResult;    
+    TypeScript.UpdateUnitResult = UpdateUnitResult;
     var ErrorEntry = (function () {
         function ErrorEntry(unitIndex, minChar, limChar, message) {
             this.unitIndex = unitIndex;
@@ -20291,7 +20305,7 @@ var TypeScript;
         }
         return ErrorEntry;
     })();
-    TypeScript.ErrorEntry = ErrorEntry;    
+    TypeScript.ErrorEntry = ErrorEntry;
     TypeScript.defaultSettings = new TypeScript.CompilationSettings();
     var TypeScriptCompiler = (function () {
         function TypeScriptCompiler(outfile, errorOutput, logger, settings) {
@@ -20654,7 +20668,7 @@ var TypeScript;
         };
         return TypeScriptCompiler;
     })();
-    TypeScript.TypeScriptCompiler = TypeScriptCompiler;    
+    TypeScript.TypeScriptCompiler = TypeScriptCompiler;
     var ScopeEntry = (function () {
         function ScopeEntry(name, type, sym) {
             this.name = name;
@@ -20663,7 +20677,7 @@ var TypeScript;
         }
         return ScopeEntry;
     })();
-    TypeScript.ScopeEntry = ScopeEntry;    
+    TypeScript.ScopeEntry = ScopeEntry;
     var ScopeTraversal = (function () {
         function ScopeTraversal(compiler) {
             this.compiler = compiler;
@@ -20729,7 +20743,7 @@ var TypeScript;
         };
         return ScopeTraversal;
     })();
-    TypeScript.ScopeTraversal = ScopeTraversal;    
+    TypeScript.ScopeTraversal = ScopeTraversal;
 })(TypeScript || (TypeScript = {}));
 
 var TypeScript;
@@ -20782,7 +20796,7 @@ var TypeScript;
         };
         return NullLogger;
     })();
-    TypeScript.NullLogger = NullLogger;    
+    TypeScript.NullLogger = NullLogger;
     var LoggerAdapter = (function () {
         function LoggerAdapter(logger) {
             this.logger = logger;
@@ -20812,7 +20826,7 @@ var TypeScript;
         };
         return LoggerAdapter;
     })();
-    TypeScript.LoggerAdapter = LoggerAdapter;    
+    TypeScript.LoggerAdapter = LoggerAdapter;
     var BufferedLogger = (function () {
         function BufferedLogger() {
             this.logContents = [];
@@ -20837,7 +20851,7 @@ var TypeScript;
         };
         return BufferedLogger;
     })();
-    TypeScript.BufferedLogger = BufferedLogger;    
+    TypeScript.BufferedLogger = BufferedLogger;
     function timeFunction(logger, funcDescription, func) {
         var start = +new Date();
         var result = func();
