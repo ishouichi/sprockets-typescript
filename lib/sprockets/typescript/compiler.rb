@@ -6,6 +6,12 @@ module Sprockets
     class Compiler
       DEFAULT_LIB_PATH = File.expand_path("../../../../bundledjs/lib.d.ts", __FILE__)
 
+      class Console
+        def log(s)
+          $stderr.puts(s)
+        end
+      end
+
       class Unit
         attr_reader :path, :content
 
@@ -68,7 +74,8 @@ module Sprockets
         @ctx["Ruby"] = {
           "source" => Unit.new(path, content),
           "additionalUnits" => additional_units,
-          "context" => context.nil? ? nil : Context.new(context)
+          "context" => context.nil? ? nil : Context.new(context),
+          "console" => Console.new
         }
         @ctx.eval("Compiler.compile()")
       end
