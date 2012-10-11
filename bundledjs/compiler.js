@@ -103,8 +103,8 @@ var Compiler;
         for (var i = 0; i < resolvedEnvironment.residentCode.length; i++) {
             try {
                 var unit = resolvedEnvironment.residentCode[i];
-                compiler.addUnit(unit.content, unit.path, true);
                 compilerUnits.push(unit);
+                compiler.addUnit(unit.content, unit.path, true);
             } catch (err) {
                 throw err;
             }
@@ -112,8 +112,8 @@ var Compiler;
         for (var i = 0; i < resolvedEnvironment.code.length; i++) {
             try {
                 var unit = resolvedEnvironment.code[i];
-                compiler.addUnit(unit.content, unit.path, false);
                 compilerUnits.push(unit);
+                compiler.addUnit(unit.content, unit.path, false);
             } catch (err) {
                 throw err;
             }
