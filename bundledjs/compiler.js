@@ -25,7 +25,7 @@ var Compiler;
                 var preProcessedFileInfo = TypeScript.preProcessFile(resolvedUnit, this.settings);
                 for (var i = 0; i < preProcessedFileInfo.referencedFiles.length; i++) {
                     var referencedUnit = preProcessedFileInfo.referencedFiles[i];
-                    var resolvedPath = (context ? context : Ruby.context).resolve(referencedUnit.path);
+                    var resolvedPath = (context ? context : parentContext).resolve(referencedUnit.path);
                     if (resolvedPath == resolvedUnit.path) {
                         throw new Compiler.TypeScriptError("File contains reference to itself (" + resolvedUnit.path + ")");
                     }
@@ -106,7 +106,7 @@ var Compiler;
                 compiler.addUnit(unit.content, unit.path, true);
                 compilerUnits.push(unit);
             } catch (err) {
-                throw new Compiler.TypeScriptError("Can not compile unit " + resolvedEnvironment.residentCode[i].path);
+                throw err;
             }
         }
         for (var i = 0; i < resolvedEnvironment.code.length; i++) {
@@ -115,7 +115,7 @@ var Compiler;
                 compiler.addUnit(unit.content, unit.path, false);
                 compilerUnits.push(unit);
             } catch (err) {
-                throw new Compiler.TypeScriptError("Can not compile unit " + resolvedEnvironment.residentCode[i].path);
+                throw err;
             }
         }
 

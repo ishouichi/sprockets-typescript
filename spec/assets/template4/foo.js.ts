@@ -1,3 +1,3 @@
-//= depend_on_asset bar
+///<reference path="bar"/>
 
 Bar.bar();

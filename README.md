@@ -19,8 +19,7 @@ And just add `.js.ts` extension to filename of typescript source.
 
 ### How does TypeScript compiler extract type information from external files?
 
-This gem adds all dependencies from sprockets directives (`require` and `depend_on_asset`),
-`///<reference path="..."/>`, `import` declarations to the compiler.
+This gem adds all dependencies from `///<reference path="..."/>` and `import` declarations to the compiler.
 
 ### How to use sprockets-typescript and sprockets-commonjs together?
 
