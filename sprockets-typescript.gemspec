@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = "sprockets-typescript"
-  s.version = "1.0.pre1"
+  s.version = "1.0"
   s.authors = "Anton Ageev"
   s.email = "antage@gmail.com"
   s.summary = "TypeScript compiler for Sprockets"
