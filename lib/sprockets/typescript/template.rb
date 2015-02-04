@@ -11,7 +11,7 @@ module Sprockets
       end
 
       def evaluate(context, locals, &block)
-        @compiler.compile(context.pathname.to_s, data, context)
+        @compiler.compile(context.pathname.to_s, data)
       end
     end
   end

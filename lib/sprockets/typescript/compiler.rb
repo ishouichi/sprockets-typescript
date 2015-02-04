@@ -1,83 +1,28 @@
 require "sprockets"
-require "v8"
+require 'typescript-node'
 
 module Sprockets
   module Typescript
     class Compiler
-      DEFAULT_LIB_PATH = File.expand_path("../../../../bundledjs/lib.d.ts", __FILE__)
+      def replace_relative_references(ts_path, source)
+        ts_dir = File.dirname(File.expand_path(ts_path))
+        escaped_dir = ts_dir.gsub(/["\\]/, '\\\\\&') # "\"" => "\\\"", '\\' => '\\\\'
 
-      class Console
-        def log(s)
-          $stderr.puts(s)
-        end
-      end
-
-      class Unit
-        attr_reader :path, :content
-
-        def initialize(path, content = nil)
-          @path = path
-          @content = content
-        end
-      end
-
-      class Context
-        def initialize(context)
-          @context = context
-        end
-
-        def resolve(path)
-          if path == DEFAULT_LIB_PATH
-            path
-          else
-            @context.resolve(path, :content_type => :self).to_s
+        # Why don't we just use gsub? Because it display odd behavior with File.join on Ruby 2.0
+        # So we go the long way around.
+        output = (source.each_line.map do |l|
+          if l.start_with?('///') && !(m = %r!^///\s*<reference\s+path="([^"]+)"\s*/>\s*!.match(l)).nil?
+            l = l.sub(m.captures[0], File.join(escaped_dir, m.captures[0]))
           end
-        end
+          next l
+        end).join
 
-        def evaluate(path)
-          pathname = Pathname.new(path)
-          attributes = @context.environment.attributes_for(path)
-          processors = attributes.processors
-          processors = processors.reject { |p| p == Sprockets::Typescript::Template }
-          if defined?(Sprockets::CommonJS)
-            processors = processors.reject { |p| p == Sprockets::CommonJS }
-          end
-
-          context = @context.environment.context_class.new(@context.environment, attributes.logical_path, pathname)
-          content = context.evaluate(pathname, :processors => processors)
-          { :content => content, :context => self.class.new(context) }
-        end
-
-        def depends_on(path)
-          @context.depend_on_asset(path)
-        end
-
-        def require(path)
-          @context.require_asset(path)
-        end
+        output
       end
 
-      def initialize
-        @ctx = V8::Context.new
-        %w(typescript.patched compiler).each do |filename|
-          @ctx.load(File.expand_path("../../../../bundledjs/#{filename}.js", __FILE__))
-        end
-      end
-
-      def eval(*args)
-        @ctx.eval(*args)
-      end
-
-      def compile(path, content, context = nil)
-        libdts = Unit.new(DEFAULT_LIB_PATH, File.read(DEFAULT_LIB_PATH))
-        additional_units = [libdts]
-        @ctx["Ruby"] = {
-          "source" => Unit.new(path, content),
-          "additionalUnits" => additional_units,
-          "context" => context.nil? ? nil : Context.new(context),
-          "console" => Console.new
-        }
-        @ctx.eval("Compiler.compile()")
+      def compile(path, content, options = nil)
+        options ||= %w(--target ES5)
+        TypeScript::Node.compile(replace_relative_references(path, content), *options)
       end
     end
   end

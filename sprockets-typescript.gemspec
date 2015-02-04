@@ -10,5 +10,5 @@ Gem::Specification.new do |s|
 
   s.add_runtime_dependency "sprockets", "~> 2.1"
   s.add_runtime_dependency "tilt"
-  s.add_runtime_dependency "therubyracer"
+  s.add_runtime_dependency "typescript-node", "~> 1.1"
 end
